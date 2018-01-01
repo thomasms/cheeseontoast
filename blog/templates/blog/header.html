@@ -38,14 +38,64 @@
 		</script>
 		<!-- END GADWP Universal Analytics -->
 		<meta name="description" content="A blog about all things in the world of Physics, Physics formulas, Maths and Programming. Fat Monty is the product of Thomas Stainer, a Particle Physicist." />
+
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" type='text/css' media='all'>
+		<link rel="stylesheet" href="{% static 'css/normalize.css' %}" type='text/css' media='all'>
+		<link rel="stylesheet" href="{% static 'css/base.css' %}" type='text/css' media='all'>
+		<link rel="stylesheet" href="{% static 'css/grid.css' %}" type='text/css' media='all'>
+		<link rel="stylesheet" href="{% static 'css/custom.css' %}" type='text/css' media='all'>
+		<link rel="stylesheet" href="{% static 'css/fonts.css' %}" type='text/css' media='all'>
+
   </head>
 
-  <body class="body" style="background: #ffffff;">
-			<h1 class="text-center"><small><a href="/blog">Cheese On Toast</a></small></h1>
-      <div class="container-fluid" style="min-height:95%; ">
-              {% block content %}
-              {% endblock %}
-      </div>
+	<body class="home blog hfeed">
+			<body class="home blog hfeed">
+
+			<div class="container menu-toggle__wrapper horizontal-middle clearfix" style="margin-left: -498px;">
+				<nav  class="header-nav verticalize-container "  aria-label="Primary Menu"  tabindex="5000" style="overflow-y: hidden; outline: none;">
+						<a href="#" class="close-navbar"><i class="icon-close"></i></a>
+
+						<ul id="navigation" class="nav verticalize"><li id="menu-item-304" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-304"><a href="http://www.fatmonty.com">Home</a></li>
+							<li id="menu-item-418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-418"><a href="http://www.fatmonty.com/places/">Places</a></li>
+							<li id="menu-item-306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306"><a href="http://www.fatmonty.com/about/">About</a></li>
+							<li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319"><a href="http://www.fatmonty.com/contact/">Contact</a></li>
+						</ul>
+					</nav><!-- .main-navigation -->
+			</div><!-- .site-header-menu -->
+
+			<div class="container clearfix">
+				<header class="grid_11">
+					<div class="titlebar">
+						<h1 class="site-title"><a href="/blog" rel="home">Cheese On Toast</a></h1>
+					</div>
+
+					<!-- menuckb -->
+					<button type="button" class="menu-icon menu-toggle">
+					<!-- menuckb <span class="icon-bar"></span> -->
+					</button>
+				</header>
+
+				<div id="content" class="grid_12">
+					<div class="grid_1">&nbsp;</div>
+					<div id="insidecontent" class="grid_10">
+						<div id="primary" class="content-area">
+							<main id="main" class="site-main" role="main">
+	              {% block content %}
+	              {% endblock %}
+							</main><!-- #main -->
+						</div><!-- #primary -->
+					</div><!-- #insidecontent -->
+				</div><!-- #content -->
+				<div class="grid_1">&nbsp;</div>
+
+			<footer id="colophon" class="site-footer grid_10" >
+				<div class="site-info">
+					<span class="sep"> Thomas Stainer | Cheese On Toast | Fat Monty </span>
+				</div><!-- .site-info -->
+			</footer><!-- #colophon -->
+		</div><!-- #container -->
+
 
 		  <script>
 		    renderMathInElement(document.body,
@@ -66,12 +116,10 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
+			<script type='text/javascript' src="{% static 'js/jquery.nicescroll.min.js' %}"></script>
+			<script type='text/javascript' src="{% static 'js/jpreloader.min.js' %}"></script>
+			<script type='text/javascript' src="{% static 'js/retina.min.js' %}"></script>
+			<script type='text/javascript' src="{% static 'js/common.js' %}"></script>
   </body>
-
-  <footer class="text-muted">
-    <div class="container-fluid">
-      <p class="text-center"><small>CheeseOnToast | FatMonty | Thomas Stainer</small></p>
-    </div>
-  </footer>
 
 </html>
