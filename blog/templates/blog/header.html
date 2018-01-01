@@ -17,6 +17,10 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="http://d3js.org/d3-selection-multi.v1.js"></script>
 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css" integrity="sha384-exe4Ak6B0EoJI0ogGxjJ8rn+RN3ftPnEQrGwX59KTCl5ybGzvHGKjhPKk/KC3abb" crossorigin="anonymous">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.js" integrity="sha384-OMvkZ24ANLwviZR2lVq8ujbE/bUO8IR1FdBrKLQBI14Gq5Xp/lksIccGkmKL8m+h" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/contrib/auto-render.min.js" integrity="sha384-cXpztMJlr2xFXyDSIfRWYSMVCXZ9HeGXvzyKTYrn03rsMAlOtIQVzjty5ULbaP8L" crossorigin="anonymous"></script>
+
 		<style type="text/css" id="syntaxhighlighteranchor"></style>
 		<link rel="icon" href="http://www.fatmonty.com/wp-content/uploads/2017/06/cropped-toast-597694_1920-32x32.jpg" sizes="32x32" />
 		<link rel="icon" href="http://www.fatmonty.com/wp-content/uploads/2017/06/cropped-toast-597694_1920-192x192.jpg" sizes="192x192" />
@@ -37,11 +41,23 @@
   </head>
 
   <body class="body" style="background: #ffffff;">
-			<h1 class="text-center"><small>Cheese On Toast</small></h1>
+			<h1 class="text-center"><small><a href="/blog">Cheese On Toast</a></small></h1>
       <div class="container-fluid" style="min-height:95%; ">
               {% block content %}
               {% endblock %}
       </div>
+
+		  <script>
+		    renderMathInElement(document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          });
+		  </script>
 
       <!-- Bootstrap core JavaScript
       ================================================== -->
