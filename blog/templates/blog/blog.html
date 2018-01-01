@@ -2,14 +2,6 @@
 
 {% block content %}
 	{% for post in object_list %}
-	<!-- <div class="container-fluid">
-	  <div class="row" style="padding-left: 20%;">
-	    <div class="col-10">
-				<p><h2><a href="/blog/{{post.id}}">{{ post.title }}</a></h2></p>
-				<p><h3>{{ post.date|date:"d-m-Y" }}</h3></p>
-			</div>
-		</div>
-	</div> -->
 	<article id="{{post.id}}" class="{{post.id}} post type-post status-publish format-standard hentry category-uncategorized">
 		<header class="entry-header">
 			<h2><a href="/blog/{{post.id}}" rel="bookmark">{{ post.title }}</a></h2>
